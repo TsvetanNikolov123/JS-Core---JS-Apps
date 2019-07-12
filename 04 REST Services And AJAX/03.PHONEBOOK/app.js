@@ -4,7 +4,7 @@ function attachEvents() {
         .addEventListener('click', () => loadNamesAndPhones());
 
     document.querySelector('#btnCreate')
-        .addEventListener('click', () => deleteNamesAndPhones());
+        .addEventListener('click', () => addNamesAndPhonesToServer());
 
     function loadNamesAndPhones() {
         const url = 'https://phonebook-nakov.firebaseio.com/phonebook.json';
@@ -41,7 +41,7 @@ function attachEvents() {
             });
     }
 
-    function deleteNamesAndPhones() {
+    function addNamesAndPhonesToServer() {
         const url = 'https://phonebook-nakov.firebaseio.com/phonebook.json';
         const person = document.querySelector('#person').value;
         const phone = document.querySelector('#phone').value;
