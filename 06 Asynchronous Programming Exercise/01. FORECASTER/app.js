@@ -20,23 +20,33 @@ function attachEvents() {
     elements.button.addEventListener('click', loadWeatherInfo);
 
     function loadWeatherInfo() {
+        elements.forecast.style.display = 'block';
         fetch(urlBase)
             .then(handler)
             .then(loadLocationWeatherInfo);
     }
 
-    function loadLocationWeatherInfo(data) {
-        const location = data.filter((obj) => obj.name === elements.inputField.value)[0];
-        const urlToday = `https://judgetests.firebaseio.com/forecast/today/${location.code}.json`;
+    function showError() {
+        const divElement = createHtmlElement('div');
+        const h1 = createHtmlElement('h1');
+        h1.innerHTML = 'Error';
+        divElement.appendChild(h1);
+        elements.current.appendChild(divElement);
+    }
 
-        fetch(urlToday)
-            .then(handler)
-            .then((data) => showLocationWeatherInfo(data, location.code));
+    function loadLocationWeatherInfo(data) {
+        try {
+            const location = data.filter((obj) => obj.name === elements.inputField.value)[0];
+            const urlToday = `https://judgetests.firebaseio.com/forecast/today/${location.code}.json`;
+            fetch(urlToday)
+                .then(handler)
+                .then((data) => showLocationWeatherInfo(data, location.code));
+        } catch (e) {
+            showError();
+        }
     }
 
     function showLocationWeatherInfo(data, code) {
-        elements.forecast.style.display = 'block';
-
         let divForecast = createHtmlElement('div', 'forecasts');
         const symbol = symbols[data.forecast.condition.toLowerCase()];
         const spanSymbol = createHtmlElement('span', ['condition', 'symbol'], symbol);
@@ -105,6 +115,7 @@ function attachEvents() {
 
     function handler(response) {
         if (response.status > 400) {
+            showError()
             throw new Error(`Something went wrong. Error: ${response.statusText}`);
         }
 
