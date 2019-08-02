@@ -25,8 +25,19 @@ const eventModel = function () {
         return requester.get(url,  headers);
     };
 
+    const getEvent = function (id) {
+        const url = `/appdata/${storage.appKey}/events/${id}`;
+        const headers = {
+            headers: {}
+        };
+
+        return requester.get(url,  headers);
+
+    };
+
     return {
         createEvent,
         getAllEvents,
+        getEvent,
     }
 }();

@@ -39,8 +39,27 @@ const eventController = function () {
             });
     };
 
-    const getDetailsEvent = function (context) {
-        console.log(context.params);
+    const getDetailsEvent = async function (context) {
+        const loggedIn = storage.getData('userInfo') !== null;
+        if (loggedIn) {
+            const username = JSON.parse(storage.getData('userInfo')).username;
+            context.loggedIn = loggedIn;
+            context.username = username;
+
+            const response = await eventModel.getEvent(context.params.eventId);
+            const event = await response.json();
+
+            Object.keys(event).forEach((key) => {
+                context[key] = event[key];
+            });
+        }
+
+        context.loadPartials({
+            header: '../views/common/header.hbs',
+            footer: '../views/common/footer.hbs'
+        }).then(function () {
+            this.partial('../views/events/detailsEvent.hbs');
+        })
     };
 
     return {
