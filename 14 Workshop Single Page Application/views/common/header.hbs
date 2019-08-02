@@ -11,13 +11,14 @@
                 </path>
             </svg>
         </a>
-<!--check for Logged in USER-->
+        <!--check for Logged in USER - loggedIn comes from homeController->loggedIn variable -->
+        <!--const loggedIn = storage.getData('userInfo') !== null;-->
         {{#if loggedIn}}
-            <a class="py-2 d-none d-md-inline-block" href="#">Organize Event</a>
+            <a class="py-2 d-none d-md-inline-block" href="#/createEvent">Organize Event</a>
             <a class="py-2 d-none d-md-inline-block" href="#">{{username}}</a>
-            <a class="py-2 d-none d-md-inline-block" href="#">Logout</a>
+            <a class="py-2 d-none d-md-inline-block" href="#/logout">Logout</a>
         {{else}}
-<!--set correct href="" path to login-->
+            <!--set correct href="" path to login-->
             <a class="py-2 d-none d-md-inline-block" href="#/login">Login</a>
         {{/if}}
     </div>

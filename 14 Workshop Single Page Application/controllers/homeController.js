@@ -1,7 +1,6 @@
 const homeController = function () {
 
     const getHome = function (context) {
-
         const loggedIn = storage.getData('userInfo') !== null;
         
         if(loggedIn){

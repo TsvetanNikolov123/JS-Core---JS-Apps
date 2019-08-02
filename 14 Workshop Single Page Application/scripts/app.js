@@ -1,5 +1,5 @@
 const app = Sammy("#rootElement", function () {
-debugger;
+
     this.use('Handlebars', 'hbs');
 
     // Home
@@ -12,7 +12,10 @@ debugger;
     this.post('#/register', userController.postRegister);
     this.post('#/login', userController.postLogin);
     this.get('#/logout', userController.logout);
-    
+
+    // Events
+    this.get('#/createEvent', eventController.getCreateEvent);
+    this.post('#/createEvent', eventController.postCreateEvent);
 });
 
 (() => {

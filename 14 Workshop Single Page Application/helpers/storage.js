@@ -1,7 +1,7 @@
 const storage = function () {
 
-    const appKey = "kid_BkSiSf7fH";
-    const appSecret = "087e74b551a840d88a4a9708162f5556";
+    const appKey = "kid_BkxIMLyGB";
+    const appSecret = "98e4b6af434c4b72a667872af2076c0f";
 
     const getData = function (key) {
         return localStorage.getItem(key + appKey);

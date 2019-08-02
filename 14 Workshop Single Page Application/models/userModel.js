@@ -2,6 +2,7 @@ const userModel = function () {
 
     const register = function (params) {
         let data = {
+            // if we do not log in with username and pass we must change username to email and params.username to params.password
             username: params.username,
             password: params.password
         };
