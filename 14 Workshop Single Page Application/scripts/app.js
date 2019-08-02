@@ -16,6 +16,7 @@ const app = Sammy("#rootElement", function () {
     // Events
     this.get('#/createEvent', eventController.getCreateEvent);
     this.post('#/createEvent', eventController.postCreateEvent);
+    this.get('#/eventDetails/:id', eventController.getDetailsEvent);
 });
 
 (() => {

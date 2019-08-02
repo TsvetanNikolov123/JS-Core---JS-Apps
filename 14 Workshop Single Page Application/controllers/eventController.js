@@ -31,11 +31,21 @@ const eventController = function () {
     };
 
     const postCreateEvent = function (context) {
-        eventModel.createEvent(context.params); // context.params get info from fields in our html file
+        eventModel.createEvent(context.params) // context.params get info from fields in our html file
+            .then(helper.handler)
+            .then(() => {
+                // notify user for success
+                homeController.getHome(context);
+            });
+    };
+
+    const getDetailsEvent = function (context) {
+        console.log(context.params);
     };
 
     return {
         getCreateEvent,
         postCreateEvent,
+        getDetailsEvent,
     }
 }();
