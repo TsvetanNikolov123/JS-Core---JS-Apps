@@ -3,6 +3,8 @@ const helper = function () {
     const handler = function (response) {
 
         if (response.status >= 400) {
+            stopNotify(); //stop error notification
+            notify('error', response.statusText); // error for notifications
             throw new Error(`Something went wrong. Error: ${response.statusText}`);
         }
 
@@ -17,8 +19,41 @@ const helper = function () {
         return params.password === params.rePassword;
     };
 
+    const notify = function (type, textContent) {
+        let element = '';
+        // element.addEventListener('click', (event) => event.currentTarget.style.display = 'none');
+        switch (type) {
+            case 'success':
+                element = document.getElementById('successBox');
+                element.textContent = textContent;
+                element.addEventListener('click', (event) => event.currentTarget.style.display = 'none');
+                break;
+            case 'error':
+                element = document.getElementById('errorBox');
+                element.textContent = textContent;
+                element.addEventListener('click', (event) => event.currentTarget.style.display = 'none');
+                break;
+            case 'loading':
+                element = document.getElementById('loadingBox');
+                element.textContent = 'Loading...';
+                element.addEventListener('click', (event) => event.currentTarget.style.display = 'none');
+                break;
+        }
+
+        element.style.display = 'block';
+    };
+
+    const stopNotify = function () {
+        Array.from(document.getElementById('notifications').children)
+            .forEach((child) => [
+                child.style.display = 'none'
+            ]);
+    };
+
     return {
         handler,
-        passwordCheck
+        passwordCheck,
+        notify,
+        stopNotify
     }
 }();

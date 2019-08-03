@@ -56,6 +56,12 @@ const eventModel = function () {
         return requester.del(url, headers);
     };
 
+    const joinEvent = function (id) {
+        // it is edit event
+        // getRequest for current event. Get his elements and set peopleInterestedIn += 1;
+        // and make putRequest
+    };
+
     return {
         createEvent,
         getAllEvents,
