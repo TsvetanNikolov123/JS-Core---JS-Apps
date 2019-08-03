@@ -2,19 +2,19 @@ const userController = function () {
 
     const getRegister = function (context) {
         context.loadPartials({
-            header: "../views/common/header.hbs",
-            footer: "../views/common/footer.hbs"
+            header: "./views/common/header.hbs",
+            footer: "./views/common/footer.hbs"
         }).then(function () {
-            this.partial('../views/auth/register.hbs')
+            this.partial('./views/auth/register.hbs')
         })
     };
 
     const getLogin = function (context) {
         context.loadPartials({
-            header: "../views/common/header.hbs",
-            footer: "../views/common/footer.hbs"
+            header: "./views/common/header.hbs",
+            footer: "./views/common/footer.hbs"
         }).then(function () {
-            this.partial('../views/auth/login.hbs')
+            this.partial('./views/auth/login.hbs')
         })
     };
 
@@ -45,6 +45,7 @@ const userController = function () {
             .then((data) => {
                 sessionStorage.setItem('username', data.username);
                 sessionStorage.setItem('authtoken', data._kmd.authtoken);
+                sessionStorage.setItem('userId', data._id); // save the current logged user id in session storage!!!
 
                 context.redirect('#/home');
             });

@@ -8,11 +8,11 @@ const homeController = function () {
             header: "./views/common/header.hbs",
             footer: "./views/common/footer.hbs",
         }).then(function () {
-            this.partial('./views/home.hbs')
-        })
+            this.partial('./views/home.hbs');
+        });
     };
 
     return {
         getHome
-    }
+    };
 }();
