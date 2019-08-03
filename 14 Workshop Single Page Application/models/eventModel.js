@@ -9,8 +9,8 @@ const eventModel = function () {
 
         const url = `/appdata/${storage.appKey}/events`;
         const headers = {
-          body:JSON.stringify(data),
-          headers: {}
+            body: JSON.stringify(data),
+            headers: {}
         };
 
         return requester.post(url, headers);
@@ -22,7 +22,7 @@ const eventModel = function () {
             headers: {}
         };
 
-        return requester.get(url,  headers);
+        return requester.get(url, headers);
     };
 
     const getEvent = function (id) {
@@ -31,13 +31,36 @@ const eventModel = function () {
             headers: {}
         };
 
-        return requester.get(url,  headers);
+        return requester.get(url, headers);
 
+    };
+
+    const editEvent = function (params) {
+        const url = `/appdata/${storage.appKey}/events/${params.eventId}`;
+        delete params.eventId;
+
+        const headers = {
+            body: JSON.stringify({...params}),
+            headers: {}
+        };
+
+        return requester.put(url, headers);
+    };
+
+    const deleteEvent = function (id) {
+        const url = `/appdata/${storage.appKey}/events/${id}`;
+        const headers = {
+            headers: {}
+        };
+
+        return requester.del(url, headers);
     };
 
     return {
         createEvent,
         getAllEvents,
         getEvent,
+        editEvent,
+        deleteEvent,
     }
 }();
