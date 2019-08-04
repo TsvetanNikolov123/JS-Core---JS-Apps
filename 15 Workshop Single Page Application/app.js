@@ -23,6 +23,9 @@ window.onload = () => {
         this.post('#/movie/edit/:id', movieController.editPost);
         this.get('#/movie/delete/:id', movieController.deleteGet);
         this.post('#/movie/delete/:id', movieController.deletePost);
+        this.get('#/movie/details/:id', movieController.loadDetails);
+        this.get('#/movie/buy/:id', movieController.buyTicket);
+
 
     }).run('#/home');
 };

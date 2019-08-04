@@ -128,6 +128,46 @@ const movieController = function () {
             })
     };
 
+    const loadDetails = function (context) {
+        const movieId = context.params.id;
+
+        helper.addHeaderInfo(context);
+
+        requester.get(`movies/${movieId}`, 'appdata', 'Kinvey')
+            .then(helper.handler)
+            .then((movieById) => {
+                context.movie = movieById;
+                context.movie.myGenres = movieById.genres.split(' ').join(',');
+
+                helper.loadPartials(context)
+                    .then(function () {
+                        this.partial('./views/movies/details.hbs');
+                    });
+            });
+    };
+
+    const buyTicket = function (context) {
+        const movieId = context.params.id;
+
+        helper.addHeaderInfo(context);
+
+        requester.get(`movies/${movieId}`, 'appdata', 'Kinvey')
+            .then(helper.handler)
+            .then((movieById) => {
+                if (movieById._acl.creator === sessionStorage.getItem('userId')) {
+                    // TODO creator must not have option to buy a ticked of his movies
+                    // it works for edit movie
+                }
+                movieById.tickets--;
+
+                return requester.put(`movies/${movieId}`, 'appdata', 'Kinvey', movieById);
+            })
+            .then(helper.handler)
+            .then(() => {
+                context.redirect('#/cinema');
+            });
+    };
+
     return {
         createGet,
         createPost,
@@ -136,7 +176,9 @@ const movieController = function () {
         editGet,
         editPost,
         deleteGet,
-        deletePost
+        deletePost,
+        loadDetails,
+        buyTicket
     }
 }();
 
