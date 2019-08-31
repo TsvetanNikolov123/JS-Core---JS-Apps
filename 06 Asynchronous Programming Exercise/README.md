@@ -10,6 +10,7 @@ Submit your solutions in the SoftUni Page -
 <https://softuni.bg/trainings/2347/js-apps-july-2019#lesson-11780>
 
 ---
+
 06.01 Forecaster
 ----------------
 
@@ -109,6 +110,11 @@ a name** and **clicks** on the button **Get Weather**, the requests being.
 The server at the address listed above will respond with valid data for location
 names "**London**", "**New York**" and "**Barcelona**".
 
+<br/>
+
+### Solution: <a title="01 Forecaster" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/blob/master/06%20Asynchronous%20Programming%20Exercise/01.%20FORECASTER/app.js">01 Forecaster</a>
+
+---
 
 06.02 Fisher Game  
 -----------------
@@ -194,3 +200,9 @@ Create the following REST services to access your data:
 <kbd><img src="https://user-images.githubusercontent.com/32310938/64067974-12609600-cc3a-11e9-8155-f58ac2626eb8.png" alt="alt text" width="600" height=""></kbd>
 
 <kbd><img src="https://user-images.githubusercontent.com/32310938/64067975-15f41d00-cc3a-11e9-9498-cb45ea41040e.png" alt="alt text" width="600" height=""></kbd>
+
+<br/>
+
+### Solution: <a title="02 Fisher Game" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/blob/master/06%20Asynchronous%20Programming%20Exercise/02.%20FISHER-GAME/app.js">02 Fisher Game</a>
+
+---
