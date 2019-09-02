@@ -113,7 +113,7 @@ each book. Implement **add** / **edit** / **delete** for tags when a book is
 
 <br/>
 
-### Solution: <a title="01 Create "Books" REST Service" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/blob/master/08%20Remote%20Databases%20Exercise/01%20BOOKS/app.js">01 Create "Books" REST Service</a>
+### Solution: <a title="01 Create Books REST Service" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/blob/master/08%20Remote%20Databases%20Exercise/01%20BOOKS/app.js">01 Create "Books" REST Service</a>
 
 ---
 
