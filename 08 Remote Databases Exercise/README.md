@@ -1,5 +1,5 @@
-08 Remote Databases - Exercise
-==============================
+08 Exercise: Remote Databases
+=============================
 
 ---
 ---
