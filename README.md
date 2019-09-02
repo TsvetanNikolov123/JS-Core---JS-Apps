@@ -56,3 +56,23 @@ JS Core: JS Apps - July 2019 @ SoftUni
 ***<a title="03 Venuemaster" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/08%20Remote%20Databases%20Exercise#0803-venuemaster">03 Venuemaster</a>***
 
 ***<a title="04 Secret Knock" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/08%20Remote%20Databases%20Exercise#0804--secret-knock-not-required">04 \*\*\*Secret Knock Not required</a>***
+
+---
+---
+
+## 10. Exercise: Routing And Architecture
+
+### Tasks Requirements And Solutions
+<br>
+
+***<a title="01 Team Manager" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/10%20Routing%20And%20Architecture%20Exercise#1001-team-manager">01 Team Manager</a>***
+
+---
+---
+
+## 11. Lab: Templating
+
+### Tasks Requirements And Solutions
+<br>
+
+***<a title="01 Contacts Book" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/11%20Templating#1101-contacts-book">01 Contacts Book</a>***
