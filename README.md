@@ -100,3 +100,13 @@ JS Core: JS Apps - July 2019 @ SoftUni
 <br>
 
 ***<a title="01 UniEnt SPA" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/14%20Workshop%20Single%20Page%20Application#js-applications-exam---unient-spa">01 UniEnt SPA</a>***
+
+---
+---
+
+## 15. Workshop: Single Page Application
+
+### Task Requirements And Solution
+<br>
+
+***<a title="01 Movies SPA" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/15%20Workshop%20Single%20Page%20Application">01 Movies SPA</a>***
