@@ -76,3 +76,17 @@ JS Core: JS Apps - July 2019 @ SoftUni
 <br>
 
 ***<a title="01 Contacts Book" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/11%20Templating#1101-contacts-book">01 Contacts Book</a>***
+
+---
+---
+
+## 12. Exercise: Templating
+
+### Tasks Requirements And Solutions
+<br>
+
+***<a title="01 List Towns" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/12%20Templating%20Exercise#1201-list-towns">01 List Towns</a>***
+
+***<a title="02 HTTP Status Cats" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/12%20Templating%20Exercise#1202-http-status-cats">02 HTTP Status Cats</a>***
+
+***<a title="03 Popular Monkeys" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/12%20Templating%20Exercise#1203-popular-monkeys">03 Popular Monkeys</a>***
