@@ -62,7 +62,7 @@ JS Core: JS Apps - July 2019 @ SoftUni
 
 ## 10. Exercise: Routing And Architecture
 
-### Tasks Requirements And Solutions
+### Task Requirements And Solution
 <br>
 
 ***<a title="01 Team Manager" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/10%20Routing%20And%20Architecture%20Exercise#1001-team-manager">01 Team Manager</a>***
@@ -72,7 +72,7 @@ JS Core: JS Apps - July 2019 @ SoftUni
 
 ## 11. Lab: Templating
 
-### Tasks Requirements And Solutions
+### Task Requirements And Solution
 <br>
 
 ***<a title="01 Contacts Book" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/11%20Templating#1101-contacts-book">01 Contacts Book</a>***
@@ -90,3 +90,13 @@ JS Core: JS Apps - July 2019 @ SoftUni
 ***<a title="02 HTTP Status Cats" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/12%20Templating%20Exercise#1202-http-status-cats">02 HTTP Status Cats</a>***
 
 ***<a title="03 Popular Monkeys" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/12%20Templating%20Exercise#1203-popular-monkeys">03 Popular Monkeys</a>***
+
+---
+---
+
+## 14. Workshop: Single Page Application
+
+### Task Requirements And Solution
+<br>
+
+***<a title="01 UniEnt SPA" href="https://github.com/TsvetanNikolov123/JS-Core---JS-Apps/tree/master/14%20Workshop%20Single%20Page%20Application#js-applications-exam---unient-spa">01 UniEnt SPA</a>***
